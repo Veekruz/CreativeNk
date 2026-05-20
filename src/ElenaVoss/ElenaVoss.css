@@ -1687,24 +1687,25 @@ footer {
     padding: 0 2.5rem;
   }
   nav {
-    padding: 1.5rem 2.5rem;
+    padding: 2rem 2.5rem;                    /* Increased from 1.5rem */
   }
   nav.scrolled {
-    padding: 1rem 2.5rem;
+    padding: 1.4rem 2.5rem;                   /* Increased from 1rem */
   }
   .nav-links {
-    gap: 1.5rem;
+    gap: 1.8rem;                               /* Slightly increased */
   }
   .nav-links a {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
+    font-size: 0.68rem;                        /* Slightly increased */
+    letter-spacing: 0.16em;
   }
   .btn-nav {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.62rem;
+    padding: 0.7rem 1.4rem;                    /* Increased */
+    font-size: 0.65rem;                        /* Increased */
   }
   .nav-logo {
-    font-size: 1.3rem;
+    font-size: 1.5rem;                         /* Increased from 1.3rem */
+    letter-spacing: 0.18em;
   }
   /* Keep hamburger hidden on tablet landscape */
   .hamburger {
@@ -1754,31 +1755,30 @@ footer {
   }
 }
 
-/* ── Tablet Portrait (769px - 768px range covered here) ── */
-/* Adding tablet portrait breakpoint that preserves some desktop features */
+/* ── Tablet Portrait (769px - 900px) ── */
 @media (min-width: 769px) and (max-width: 900px) {
-  /* Keep nav links visible on tablet portrait but reduce size */
+  /* Keep nav links visible on tablet portrait */
   nav {
-    padding: 1.2rem 2rem;
+    padding: 1.6rem 2rem;                      /* Increased from 1.2rem */
   }
   nav.scrolled {
-    padding: 0.8rem 2rem;
+    padding: 1.2rem 2rem;                      /* Increased from 0.8rem */
   }
   .nav-links {
-    gap: 1rem;
+    gap: 1.2rem;                               /* Slightly increased */
   }
   .nav-links a {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
+    font-size: 0.62rem;                        /* Slightly increased */
+    letter-spacing: 0.13em;
   }
   .nav-logo {
-    font-size: 1.2rem;
-    letter-spacing: 0.15em;
+    font-size: 1.35rem;                        /* Increased from 1.2rem */
+    letter-spacing: 0.16em;
   }
   .btn-nav {
-    padding: 0.5rem 1rem;
-    font-size: 0.58rem;
-    letter-spacing: 0.15em;
+    padding: 0.6rem 1.1rem;                    /* Increased */
+    font-size: 0.6rem;                         /* Increased */
+    letter-spacing: 0.16em;
   }
   /* Still show desktop nav */
   .hamburger {
@@ -1809,10 +1809,10 @@ footer {
     padding: 0 1.5rem;
   }
   nav {
-    padding: 1.5rem;
+    padding: 2rem 1.8rem;                      /* Increased from 1.5rem */
   }
   nav.scrolled {
-    padding: 1rem 1.5rem;
+    padding: 1.4rem 1.8rem;                    /* Increased from 1rem */
   }
   /* Hide desktop nav, show hamburger */
   .nav-links,
@@ -1821,6 +1821,12 @@ footer {
   }
   .hamburger {
     display: flex;
+    gap: 6px;                                  /* Increased from 5px */
+    padding: 8px;                              /* Increased from 5px */
+  }
+  .hamburger span {
+    width: 32px;                               /* Increased from 28px */
+    height: 1.5px;                             /* Slightly thicker */
   }
   section {
     padding: 5rem 0;
@@ -1865,35 +1871,52 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* ── Tablet/Mobile Nav Enhancements ── */
+  /* ── Mobile Nav Enhancements ── */
   .nav-logo {
-    font-size: 1.2rem;
+    font-size: 1.4rem;                         /* Increased from 1.2rem */
+    letter-spacing: 0.18em;
   }
-  /* Hamburger animation is handled by .active class in existing CSS */
   .mobile-menu a {
-    font-size: 2rem;
+    font-size: 2.2rem;                         /* Increased from 2rem */
+  }
+  .mobile-menu {
+    gap: 3rem;                                 /* Increased from 2.5rem */
+  }
+
+  /* Hamburger active state adjustments for larger size */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
 /* ── Small Mobile (max-width: 576px) ── */
 @media (max-width: 576px) {
   nav {
-    padding: 1rem;
+    padding: 1.5rem 1.2rem;                    /* Increased from 1rem */
   }
   nav.scrolled {
-    padding: 0.8rem 1rem;
+    padding: 1.2rem 1.2rem;                    /* Increased from 0.8rem */
   }
   .nav-logo {
-    font-size: 1.1rem;
+    font-size: 1.25rem;                        /* Increased from 1.1rem */
+    letter-spacing: 0.14em;
+  }
+  .hamburger {
+    gap: 5px;                                  /* Increased from default */
+    padding: 6px;
   }
   .hamburger span {
-    width: 24px;
+    width: 28px;                               /* Increased from 24px */
+    height: 1.5px;
   }
   .mobile-menu a {
-    font-size: 1.8rem;
+    font-size: 2rem;                           /* Increased from 1.8rem */
   }
   .mobile-menu {
-    gap: 2rem;
+    gap: 2.5rem;                               /* Increased from 2rem */
   }
 
   .container {
@@ -1952,16 +1975,18 @@ footer {
 
   /* Nav refinements for very small screens */
   .nav-logo {
-    font-size: 1rem;
-    letter-spacing: 0.1em;
+    font-size: 1.15rem;                        /* Increased from 1rem */
+    letter-spacing: 0.12em;
   }
   .hamburger {
-    gap: 4px;
+    gap: 5px;                                  /* Increased from 4px */
+    padding: 5px;
   }
   .hamburger span {
-    width: 22px;
+    width: 26px;                               /* Increased from 22px */
+    height: 1.5px;
   }
   .mobile-menu a {
-    font-size: 1.5rem;
+    font-size: 1.7rem;                         /* Increased from 1.5rem */
   }
 }
